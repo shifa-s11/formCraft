@@ -1,5 +1,14 @@
 @import "tailwindcss";
-@import "tw-animate-css";
+/* @import "tw-animate-css"; */
+
+.bgColor{
+   background-color:#0f172a ;
+  background-image: radial-gradient(at 0% 0%, #1e3a8a, transparent 50%), radial-gradient(at 100% 100%, #1a1a2e, transparent 50%)
+}
+.buttonColor{
+  background-image: linear-gradient(to right, #e94560, #ff847c);
+  box-shadow:0 4px 15px rgba(233, 69, 96, 0.4) ;
+}
 
 @custom-variant dark (&:is(.dark *));
 
