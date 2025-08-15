@@ -181,7 +181,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog";
-import { createQuestion } from "@/lib/questionApi"; // Corrected import path
+import { createQuestion,Question } from "@/lib/questionApi";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -203,7 +203,7 @@ interface SubQuestion {
 interface Props {
   open: boolean;
   onClose: () => void;
-  onSave: (question: any) => void;
+   onSave: (question:Question) => void;
 }
 
 export default function ComprehensionModal({ open, onClose, onSave }: Props) {

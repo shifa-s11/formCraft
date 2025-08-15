@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { DndContext, closestCenter } from "@dnd-kit/core";
+import { DndContext, closestCenter,DragEndEvent } from "@dnd-kit/core";
 import { SortableContext, verticalListSortingStrategy, useSortable } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
 import { Button } from "@/components/ui/button";
@@ -68,7 +68,7 @@ function SortableQuestionItem({
 }
 
 export default function SortableQuestionsList({ questions, setQuestions }: SortableQuestionsListProps) {
-  const handleDragEnd = (event: any) => {
+  const handleDragEnd = (event:DragEndEvent) => {
     const { active, over } = event;
     if (!over || active.id === over.id) return;
 
